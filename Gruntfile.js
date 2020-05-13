@@ -39,16 +39,16 @@ module.exports = function(grunt){
 			},
 		},
 		//替换插件的配置信息
-		replace: {
-			another_example: {
-				src: ['smaple/demo.html'],
-				overwrite: true,//写覆盖匹配的源文件
-				replacements: [{
-					from: /-\d{1,}\.\d{1,}\.\d{1,}/g,
-					to: "<%= pkg.version %>"
-				}]
-			}
-		}
+  replace: {
+          another_example: {
+            src: ['sample/demo.html'],
+            overwrite: true,          // overwrite matched source files
+            replacements: [{
+              from: /-\d{1,}\.\d{1,}\.\d{1,}/g,
+              to: "<%= pkg.version %>"
+            }]
+          }
+        }
     });
     //使用插件第二步：加载插件
     grunt.loadNpmTasks('grunt-contrib-uglify');
